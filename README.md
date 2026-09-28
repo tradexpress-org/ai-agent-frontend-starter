@@ -1,4 +1,4 @@
-### Published by (https://api.kenwellitsolution.com/api/domain)[https://api.tradexpress.co/#access] the robot:=>x<
+### Published by (https://api.tradexpress.co/api#Network)[https://api.tradexpress.co/#access] the robot:=>x<
 ### Get 200 ok
 sudo-name-save
 (KENWELL) AI AGENT TERMINAL (Ollama)

@@ -1,4 +1,4 @@
-// ### Product Keyword: Enter a plain-language description into an official or specialized HS lookup tool (e.g., "wireless headphones", "lithium-ion battery").   
+### Product Keyword: Enter a plain-language description into an official or specialized HS lookup tool (e.g., "wireless headphones", "lithium-ion battery").   
 ### Published by: https://api.tradexpress.co/api#Network, <rem>https://api.tradexpress.co/#access<rem/>
 ### Topic: Which access tier is right for me?
 ### Get 200 ok

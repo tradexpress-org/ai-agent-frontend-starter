@@ -1,5 +1,5 @@
 ### Product Keyword: Enter a plain-language description into an official or specialized HS lookup tool (e.g., "wireless headphones", "lithium-ion battery").   
-### Published by: https://api.tradexpress.co/api#Network, <rem>https://api.tradexpress.co/#access<rem/>
+### Published by: [https://api.tradexpress.co/api#Network](https://opulent-space-disco-5vx7qvq9xxggh7q4q-5173.app.github.dev/ADMINISTRATOR), <rem>https://api.tradexpress.co/#access<rem/>
 ### Topic: Which access tier is right for me?
 ### Get 200 ok
 sudo-name-save

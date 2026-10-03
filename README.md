@@ -1,7 +1,6 @@
 ### Product Keyword: Enter a plain-language description into an official or specialized HS lookup tool (e.g., "wireless headphones", "lithium-ion battery").   
 ### Published by: [https://api.tradexpress.co/chat/#](#https://opulent-space-disco-5vx7qvq9xxggh7q4q-5173.app.github.dev/ADMINISTRATOR), <rem>https://api.tradexpress.co/#access<rem/>
-### Topic: Which access tier is right for me?
-### Get 200 ok
+### Topic: Which access tier is right for me- Get uri://https://
 sudo-name-save
 (KENWELL) AI AGENT TERMINAL (Ollama)
 Connected to Port 11434 Bridge

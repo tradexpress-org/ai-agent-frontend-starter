@@ -85,5 +85,44 @@ curl -X POST {{baseUrl}}/chat \
   <p class="desc">List all sessions.</p>
   <pre><code>curl {{baseUrl}}/chat</code></pre>
 
+  <h2>Datasets</h2>
+  <p>Import JSON or CSV files into the local Postgres database. JSON files must contain an array of objects; CSV headers become record fields. Dataset names must be unique.</p>
+
+  <div class="endpoint">
+    <span class="method post">POST</span>
+    <span class="path">/datasets</span>
+    <code>chat.ImportDataset</code>
+  </div>
+  <p class="desc">Import a JSON or CSV file using multipart form fields <code>name</code> and <code>file</code>.</p>
+  <pre><code>curl -X POST {{baseUrl}}/datasets \
+  -F "name=customers" \
+  -F "file=@customers.csv"</code></pre>
+
+  <div class="endpoint">
+    <span class="method get">GET</span>
+    <span class="path">/datasets</span>
+    <code>chat.ListDatasets</code>
+  </div>
+  <p class="desc">List datasets and their record counts.</p>
+  <pre><code>curl {{baseUrl}}/datasets</code></pre>
+
+  <div class="endpoint">
+    <span class="method get">GET</span>
+    <span class="path">/datasets/:datasetID</span>
+    <code>chat.GetDataset</code>
+  </div>
+  <p class="desc">Get a dataset, including its records.</p>
+  <pre><code>curl {{baseUrl}}/datasets/&lt;dataset_id&gt;</code></pre>
+
+  <div class="endpoint">
+    <span class="method post">PATCH</span>
+    <span class="path">/datasets/:datasetID</span>
+    <code>chat.RenameDataset</code>
+  </div>
+  <p class="desc">Rename a dataset. The new name must not already be in use.</p>
+  <pre><code>curl -X PATCH {{baseUrl}}/datasets/&lt;dataset_id&gt; \
+  -H "Content-Type: application/json" \
+  -d '{"name":"new-name"}'</code></pre>
+
 </body>
 </html>`

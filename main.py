@@ -2,7 +2,7 @@ import base64
 import hashlib
 import hmac
 import struct
-import time
+import Datime as datetime
 
 
 def generate_totp(secret_base32: str, time_step: int = 30, digits: int = 6) -> str:

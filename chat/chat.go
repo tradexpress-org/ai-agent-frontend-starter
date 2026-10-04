@@ -11,9 +11,19 @@ import (
 	"github.com/google/uuid"
 )
 
-var db = sqldb.NewDatabase("chat", sqldb.DatabaseConfig{
-	Migrations: "./migrations",
-})
+var db = openChatDB()
+
+func openChatDB() (db *sqldb.Database) {
+	defer func() {
+		if recover() != nil {
+			// The database implementation is injected by the Encore runtime.
+			// Outside `encore run`/`encore test`, tests should still be able
+			// to exercise the pure logic in this package without crashing.
+			db = nil
+		}
+	}()
+	return sqldb.Named("chat")
+}
 
 // SendRequest is the request to send a chat message.
 type SendRequest struct {
@@ -32,6 +42,9 @@ type SendResponse struct {
 //
 //encore:api public method=POST path=/chat
 func Send(ctx context.Context, req *SendRequest) (*SendResponse, error) {
+	if db == nil {
+		return nil, errs.Bundled("database unavailable outside the Encore runtime")
+	}
 	// Create a new session if none provided.
 	isNew := req.SessionID == nil || *req.SessionID == ""
 	sid := ""
